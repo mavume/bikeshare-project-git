@@ -8,7 +8,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to specify a place
     Returns:
     
         (string) city - name of the city to analyze
@@ -53,11 +53,12 @@ def get_filters():
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
-    Pushes:
+    Pushes to be entered:
         (string) city - name of the city to analyze
         (string) month - name of the month to filter by, or "all" to apply no month filter
         (string) day - name of the day of week to filter by, or "all" to apply no day filter
     Shown in Return:
+
         df - Pandas DataFrame containing city data filtered by month and day
     """
     #load data to read
@@ -109,7 +110,7 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Shows statistics on the most frequent times of travel."""
+    """ Shows statistics on the most frequent times of travel. """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
